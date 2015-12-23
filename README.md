@@ -1,5 +1,5 @@
-## SIMPLE COLOR CARD GAME
+## SIMPLE CARD COLOR GAME
 
-Simple 5x5 Color Card Game build using AngularJS.
+Simple 5x5 Card Color Game build using AngularJS.
 
-[Color Card Game Demo](http://nsulistiyawan.github.io/simple-color-card-game)
+[Color Card Game Demo](http://nsulistiyawan.github.io/simple-card-color-game)
