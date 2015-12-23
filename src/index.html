@@ -26,18 +26,18 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <div class="container" ng-controller="MainController as main">
+  <div class="container" ng-cloack ng-controller="MainController as main">
 
 
 
     <div class="pure-g information-bar">
-      <div class="pure-u-12-24 text-center">
+      <div ng-cloak class="pure-u-12-24 text-center">
         Times
         {{ main.timeCount }}
 
         {{ main.gameTimer.duration() }}
       </div>
-      <div class="pure-u-12-24 text-center">
+      <div ng-cloak class="pure-u-12-24 text-center">
         Move
         {{ main.moveCount }}
 
@@ -63,13 +63,17 @@
 
       </div>
       <div class="overlay-text" ng-show="main.introScreen==true">
-        <a ng-if="main.lastResult!=null" ng-click="main.clickStart()"> PLAY AGAIN ? </a>
-        <a ng-if="main.lastResult==null" ng-click="main.clickStart()"> PLAY GAME </a>
+        <a  ng-click="main.clickStart()">
+          <div ng-cloak>
+            {{ main.lastResult === null ? 'START GAME' : 'PLAY AGAIN'  }}
+          </div>
+
+         </a>
       </div>
 
     </div>
     <div class="pure-g last-result-bar" ng-if="main.lastResult != null">
-      <div class="pure-u-5-5 text-center">
+      <div ng-cloak class="pure-u-5-5 text-center">
         Last Result :
         {{ main.lastResult.moveCount }} move, {{ main.lastResult.duration }} second
       </div>
