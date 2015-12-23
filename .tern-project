@@ -1,0 +1,15 @@
+{
+
+  "libs": [
+    "browser"
+  ],
+  "plugins": {
+    "complete_strings": {},
+    "angular": {},
+    "requirejs": {},
+    "modules": {},
+    "doc_comment": {
+      "fullDocs": true
+    }
+  }
+}
